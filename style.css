@@ -1,0 +1,90 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body{
+    font-family: Arial, sans-serif;
+    background: #eef3ff;
+    color: #222;
+}
+
+/* NAVIGATION BAR */
+nav{
+    position: fixed;
+
+    top: 0;
+    width: 100%;
+
+    background: #4361ee;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 40px;
+
+    z-index: 1000;
+}
+
+/* NAV LINKS */
+nav ul{
+    display: flex;
+    list-style: none;
+
+    gap: 20px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* SECTION */
+.section{
+    min-height: 100vh;
+
+    padding: 120px 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+/* TITLES */
+h1{
+    font-size: 50px;
+    color: #3557ff;
+}
+
+/* CARDS */
+.card{
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    margin-top: 20px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* DROPDOWN */
+summary{
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+details p{
+    margin-top: 10px;
+    line-height: 1.6;
+}
