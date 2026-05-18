@@ -94,3 +94,36 @@ p{
     line-height: 2;
     max-width: 850px;
 }
+
+.member-title{
+    margin-top: 40px;
+    font-size: 35px;
+}
+
+.members-container{
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    margin-top: 20px;
+}
+
+.member-card{
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    font-size: 24px;
+    font-weight: 500;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    transition: 0.3s;
+}
+
+.member-card:hover{
+    transform: translateX(10px);
+}
