@@ -39,7 +39,7 @@ nav ul{
 }
 
 nav a{
-    color: white;
+    color: #3f57af;
     text-decoration: none;
     font-weight: bold;
 }
@@ -60,7 +60,7 @@ nav a{
 /* TITLES */
 h1{
     font-size: 50px;
-    color: #3557ff;
+    color: #2b308a;
 }
 
 /* CARDS */
