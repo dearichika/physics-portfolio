@@ -19,7 +19,7 @@ nav{
     top: 0;
     width: 100%;
 
-    background: #4361ee;
+    background: #D7EAf9;
 
     display: flex;
     justify-content: space-between;
@@ -96,7 +96,7 @@ p{
 }
 
 .intro-section p{
-    font-size: 22px;
+    font-size: 20px;
     line-height: 2;
     max-width: 850px;
 }
