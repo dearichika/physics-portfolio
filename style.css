@@ -7,7 +7,8 @@
 
 /* BODY */
 body{
-    font-family: Arial, sans-serif;
+    
+    font-family: 'Plus Jakarta Sans', sans-serif; 
     background: #f9fbff;
     color: #26292e;
 }
@@ -15,50 +16,46 @@ body{
 /* NAVIGATION BAR */
 nav{
     position: fixed;
-
     top: 0;
     width: 100%;
-
     background: #D7EAf9;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 15px 40px;
-
     z-index: 1000;
+    
+    /* Keeps the navigation items matching your cute heading style */
+    font-family: 'Quicksand', sans-serif;
 }
 
 /* NAV LINKS */
 nav ul{
     display: flex;
     list-style: none;
-
     gap: 20px;
 }
 
 nav a{
     color: #3f57af;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /* SECTION */
 .section{
     min-height: 100vh;
-
     padding: 120px 50px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     gap: 20px;
 }
 
 /* TITLES */
 h1{
+    font-family: 'Quicksand', sans-serif; 
+    font-weight: 700; 
     font-size: 50px;
     color: #2b308a;
 }
@@ -66,21 +63,17 @@ h1{
 /* CARDS */
 .card{
     background: white;
-
     padding: 20px;
-
     border-radius: 15px;
-
     margin-top: 20px;
-
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* DROPDOWN */
 summary{
+    font-family: 'Quicksand', sans-serif; 
     font-size: 22px;
-    font-weight: bold;
-
+    font-weight: 700;
     cursor: pointer;
 }
 
@@ -93,6 +86,7 @@ p{
     font-size: 20px;
     line-height: 1.8;
     max-width: 900px;
+    font-weight: 400; 
 }
 
 .intro-section p{
