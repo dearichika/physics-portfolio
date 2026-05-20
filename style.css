@@ -87,42 +87,41 @@ h1{
 h3{
     margin-top: 20px;
     margin-bottom: 10px;
+    color: #2b308a;
 }
 
 /* PORTFOLIO GRID */
 .portfolio-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 25px;
+    grid-template-columns: 1fr; /* Stack cards sequentially down the timeline since they are wider now */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* CARDS */
 .card{
     background: white;
-
-    padding: 25px;
-
+    padding: 30px;
     border-radius: 20px;
-
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     transition: 0.3s;
+    border: 1px solid rgba(63, 87, 175, 0.08);
 }
 
 .card:hover{
-    transform: translateY(-5px);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(43, 48, 138, 0.1);
 }
 
 /* DROPDOWN */
 summary{
     font-family: 'Quicksand', sans-serif;
-
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 700;
-
     cursor: pointer;
-
     list-style: none;
+    color: #2b308a;
 }
 
 summary::-webkit-details-marker{
@@ -140,7 +139,49 @@ details[open] summary::after{
     transform: rotate(45deg);
 }
 
-/* TEXT */
+/* FLEXBOX LAYOUT SPLIT FOR SIDE-BY-SIDE CONTENT */
+.card-split {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+    align-items: flex-start;
+}
+
+.card-text {
+    flex: 1.2; /* Allows text section to utilize slightly more room */
+}
+
+.card-media {
+    flex: 0.8; /* Contains the image space cleanly */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* RESPONSIVE ONLINE IMAGE CONTROL */
+.portfolio-img {
+    width: 100%;
+    max-width: 380px; /* Locks maximum boundary width */
+    height: auto;
+    object-fit: contain;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.04);
+    background-color: #fafbfc; /* Gives transparent png files a clean backing */
+}
+
+/* MATH FORMULAS */
+.formula {
+    font-family: monospace;
+    background: #f4f6ff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    display: inline-block;
+    color: #2b308a;
+    font-weight: 600;
+}
+
+/* TEXT ELEMENTS */
 p{
     margin-top: 12px;
     line-height: 1.8;
@@ -185,24 +226,17 @@ tr:nth-child(even){
 .members-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
     gap: 20px;
-
     margin-top: 25px;
 }
 
 .member-card{
     background: white;
-
     padding: 25px;
-
     border-radius: 20px;
-
     font-size: 22px;
     font-weight: 600;
-
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-
     transition: 0.3s;
 }
 
@@ -210,8 +244,8 @@ tr:nth-child(even){
     transform: translateY(-5px);
 }
 
-/* MOBILE */
-@media(max-width: 768px){
+/* MOBILE RESPONSIVE ADAPTABILITY */
+@media(max-width: 850px){
 
     h1{
         font-size: 50px;
@@ -225,8 +259,14 @@ tr:nth-child(even){
         padding: 120px 25px;
     }
 
-    .portfolio-grid{
-        grid-template-columns: 1fr;
+    /* Switches side-by-side back to stacked on phones so it doesn't squish */
+    .card-split {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .portfolio-img {
+        max-width: 100%;
     }
 
 }
